@@ -8,8 +8,11 @@ import java.util.Map;
 
 public class PlainLoginModule implements LoginModule {
 
-    private static final String USERNAME_CONFIG = "username";
-    private static final String PASSWORD_CONFIG = "password";
+//    private static final String USERNAME_CONFIG = "username";
+//    private static final String PASSWORD_CONFIG = "password";
+//
+    private static final String USERNAME_CONFIG = "admin";
+    private static final String PASSWORD_CONFIG = "admin-secret";
 
     public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
         System.out.println("----------------------------------Working-----------------------------");
