@@ -1,4 +1,1 @@
-com\kafka\PlainSaslServer$PlainSaslServerFactory.class
-com\kafka\PlainSaslServerProvider.class
-com\kafka\PlainSaslServer.class
 com\kafka\PlainLoginModule.class
