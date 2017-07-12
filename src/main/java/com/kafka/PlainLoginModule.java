@@ -4,18 +4,12 @@ import javax.security.auth.Subject;
 import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.login.LoginException;
 import javax.security.auth.spi.LoginModule;
-import java.security.Security;
 import java.util.Map;
-import javax.security.sasl.SaslServer;
 
 public class PlainLoginModule implements LoginModule {
 
     private static final String USERNAME_CONFIG = "username";
     private static final String PASSWORD_CONFIG = "password";
-
-    static {
-        PlainSaslServerProvider.initialize();
-    }
 
     public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
         System.out.println("----------------------------------Working-----------------------------");
