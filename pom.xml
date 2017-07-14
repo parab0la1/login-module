@@ -8,4 +8,12 @@
     <artifactId>login-module</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-admin-client</artifactId>
+            <version>3.2.0.Final</version>
+        </dependency>
+    </dependencies>
+
 </project>
