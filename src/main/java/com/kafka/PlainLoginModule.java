@@ -19,16 +19,7 @@ public class PlainLoginModule implements LoginModule {
 
     private static final String USERNAME_CONFIG = "username";
     private static final String PASSWORD_CONFIG = "password";
-    private static final String ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4UUtSaTlRdGk2cHdzc2Q" +
-            "2bXRRa2ZjR19xWVRHNS1vSDV5NkJQdVRteWIwIn0.eyJqdGkiOiJhMTM0OGEwNC1lYWU0LTQyYzEtODJmYi01YzU1NDM0ZWM2YjkiLCJle" +
-            "HAiOjE1MDg1OTUwMTcsIm5iZiI6MCwiaWF0IjoxNTAwMDQxNDE3LCJpc3MiOiJodHRwOi8vMTMuNzQuMzYuMTk4OjgwODAvYXV0aC9yZWF" +
-            "sbXMvbWFzdGVyIiwiYXVkIjoiYWRtaW4tY2xpIiwic3ViIjoiNWNjZTQ0NDEtMDI4Yi00NTI1LTg0NTQtZmM5MjE2ZWYxOTcwIiwidHlwI" +
-            "joiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiODliYWU1YmItMjM3NC00MzQ4LWF" +
-            "iNjEtNGUyOTk2MmY2NThiIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sInByZWZlcnJlZ" +
-            "F91c2VybmFtZSI6ImFkbWluIn0.BmR97AB2C5mUBFCUQTodDtwtvmF-nA5FGPh32An5COU-x-0rs81EWzr8nWUiJCiR-GncUw6hYHmWjxA" +
-            "8lvJ4Lj7O2dauwmBlT-fk28-nlPwwtLv4dvQ97LOMzUVHeuJSzrC4eXXF6qdLROB-M0NDkR-dY9hOdx8BxeKeVFsKKiJ-qf2vtAJqjoK-x" +
-            "f48_xsNzUS9Y7eoA0V-baaFf_pzMyaJAENYHG9ZiwvEssM_BMTFAPcyabnIeJD8iR1s1fgdEo38APjM8x5nhswfqpJmpVJ-MARxJ177Z3w" +
-            "zhU7v3MWB3MiWGgV-9NmGv2uqppYOhuEzbIBGDzUdhUoMjbKk2g";
+    private static final String ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4UUtSaTlRdGk2cHdzc2Q2bXRRa2ZjR19xWVRHNS1vSDV5NkJQdVRteWIwIn0.eyJqdGkiOiI0YTNhMGZhYS1kYzczLTRkOTQtOTVkMS01OWU4OWZkMmMyZjUiLCJleHAiOjE1MDg1OTY1NDcsIm5iZiI6MCwiaWF0IjoxNTAwMDQyOTQ3LCJpc3MiOiJodHRwOi8vMTMuNzQuMzYuMTk4OjgwODAvYXV0aC9yZWFsbXMvbWFzdGVyIiwiYXVkIjoiYWRtaW4tY2xpIiwic3ViIjoiNWNjZTQ0NDEtMDI4Yi00NTI1LTg0NTQtZmM5MjE2ZWYxOTcwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMDI0NWZkODktMTA1Zi00ZWM3LTgyNDQtOGEwNmY5NzYwNjgzIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIn0.QFAzdO2LVO7cI83s2nnE8dNlcNk50jqDPa36zaTyT-h4qTrSjhARotQe3B357L95b7NMBaV8v9yHK76ftPx9qWHkJQ4j8ghTPJKrrRD3IuyFvhKhMNhYW-jf_wvBl_Om4goZaE7sop1qizvHP1J6xaeHgCjcHuHprnLS9_NPHl9BX0cgSE_LPtjaOvEOC0iqeFwYFObbk3FwlZriA5sU6csWleTHyhUXXRJCcsFSoOjN2m3TqIdSsT7CfY5ZKGvdSx98tLA-JJrCNkukd92MFn4SuRQ0vCubbKPVMjKEm2YG4ZfaQG5dq1wzz_DVQp4DqLUGK9059RIiGvf4bifjmA";
 
     public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
         System.out.println("Authenticated");
