@@ -19,7 +19,7 @@ public class PlainLoginModule implements LoginModule {
 
     private static final String USERNAME_CONFIG = "username";
     private static final String PASSWORD_CONFIG = "password";
-    private static final String ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4UUtSaTlRdGk2cHdzc2Q2bXRRa2ZjR19xWVRHNS1vSDV5NkJQdVRteWIwIn0.eyJqdGkiOiI0YTNhMGZhYS1kYzczLTRkOTQtOTVkMS01OWU4OWZkMmMyZjUiLCJleHAiOjE1MDg1OTY1NDcsIm5iZiI6MCwiaWF0IjoxNTAwMDQyOTQ3LCJpc3MiOiJodHRwOi8vMTMuNzQuMzYuMTk4OjgwODAvYXV0aC9yZWFsbXMvbWFzdGVyIiwiYXVkIjoiYWRtaW4tY2xpIiwic3ViIjoiNWNjZTQ0NDEtMDI4Yi00NTI1LTg0NTQtZmM5MjE2ZWYxOTcwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMDI0NWZkODktMTA1Zi00ZWM3LTgyNDQtOGEwNmY5NzYwNjgzIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIn0.QFAzdO2LVO7cI83s2nnE8dNlcNk50jqDPa36zaTyT-h4qTrSjhARotQe3B357L95b7NMBaV8v9yHK76ftPx9qWHkJQ4j8ghTPJKrrRD3IuyFvhKhMNhYW-jf_wvBl_Om4goZaE7sop1qizvHP1J6xaeHgCjcHuHprnLS9_NPHl9BX0cgSE_LPtjaOvEOC0iqeFwYFObbk3FwlZriA5sU6csWleTHyhUXXRJCcsFSoOjN2m3TqIdSsT7CfY5ZKGvdSx98tLA-JJrCNkukd92MFn4SuRQ0vCubbKPVMjKEm2YG4ZfaQG5dq1wzz_DVQp4DqLUGK9059RIiGvf4bifjmA";
+    private static final String ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBSkN6ZDVXQ0RHOTNaZmVhMUxjWS1HSkk4Sk9fV3EteVpTcmNGTml4bHpNIn0.eyJqdGkiOiJkZjVkMGE5YS1hMTY5LTRlZGUtOGI0Yi0zMzM4OTAwMDRmMjAiLCJleHAiOjE1ODY2MTEwNjQsIm5iZiI6MCwiaWF0IjoxNTAwMjk3NDY0LCJpc3MiOiJodHRwOi8vNTIuMTY5LjE4LjE5ODo4MDgwL2F1dGgvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFkbWluLWNsaSIsInN1YiI6ImQ4ZjA2NDc4LWI1MjUtNGY5Yi1hMjQ2LTg1YTYwZjhmNWM3OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFkbWluLWNsaSIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjMyYjYyZjlmLWY2ZTMtNGM3Ny1iYjUxLTRjMjBmOWNmMmU2ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZXNvdXJjZV9hY2Nlc3MiOnt9LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.LW0j7ctaCKTPn2SmOIr9D8fTK6XAwZFekQwoLJ6VSwikzCvOonRwgstGcGH4nu22YM1R6PVOivoGSFL-76dBpYa_MRwahxcHwXdfwzoS7Z22tGP5Nl8h1RmOSAVGbKZDsgkVLo4987f233fAV462bFPkQ0ri-_6WXmRAHRJLWYMKYl1-b5vDBCbHA6d9vaOPujZ_iKP7892cExVodWajxdTG4ORFeZxRab81ZeUotRmv0xnNI3cyv0XmGy9OLqyqbP2LuM7TZcCDqNL5ih4kxEKVHj0RSfPtIpIouJUxXo_hGHI6cybcCJ9St8gFYHw9M2GvjtOJ4ugdiPTRZaUkTQ";
 
     public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
         System.out.println("Authenticated");
@@ -45,12 +45,12 @@ public class PlainLoginModule implements LoginModule {
 //        System.out.println(keycloak.serverInfo());
 
 
-        String url = "http://13.74.36.198:8080/auth/admin/realms/master/users";
+        String url = "http://52.169.18.198:8080/auth/admin/realms/master/users";
         try {
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
-            con.setRequestProperty("Authorization", "bearer " + ACCESS_TOKEN);
+            con.setRequestProperty("Authorization", "Bearer " + ACCESS_TOKEN);
 
             int responseCode = con.getResponseCode();
             System.out.println("\nSending 'GET' request to URL : " + url);
